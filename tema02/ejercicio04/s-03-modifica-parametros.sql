@@ -14,7 +14,7 @@ alter system set db_writer_processes=2 scope=spfile;
 
 -- modificación del parámetro: log_buffer
 -- nivel: system, scope: spfile
-alter system set log_buffer=10240 scope=spfile;
+alter system set log_buffer=10485760 scope=spfile;
 
 -- modificación del parámetro: db_files
 -- nivel: system, scope: spfile
@@ -31,12 +31,12 @@ alter system set transactions=600 scope=spfile;
 -- modificación del parámetro: hash_area_size
 -- nivel: session
 -- nivel: system, scope=spfile
-alter session set hash_area_size=2048;
-alter system set hash_area_size=2048 scope=spfile;
+alter session set hash_area_size=2097152;
+alter system set hash_area_size=2097152 scope=spfile;
 
 -- modificación del parámetro: sort_area_size
 -- nivel: session
-alter session set sort_area_size=1024;
+alter session set sort_area_size=1048576;
 
 -- modificación del parámetro: sql_trace
 -- nivel: system, scope=memory
@@ -56,7 +56,8 @@ create table emanuel0204.t03_update_param_session as
   from v$parameter
   where name in (
     'cursor_invalidation', 'optimizer_mode',
-    'sql_trace', 'sort_area_size', 'hash_area_size', 'nls_date_format'
+    'sql_trace', 'sort_area_size', 'hash_area_size', 'nls_date_format',
+    'db_writer_processes', 'db_files', 'dml_locks', 'log_buffer', 'transactions'
   )
   and value is not null;
 
@@ -64,7 +65,11 @@ create table emanuel0204.t03_update_param_session as
 create table emanuel0204.t04_update_param_instance as
   select name,value
   from v$system_parameter
-  where name in ('optimizer_mode', 'sql_trace')
+  where name in (
+    'cursor_invalidation', 'optimizer_mode',
+    'sql_trace', 'sort_area_size', 'hash_area_size', 'nls_date_format',
+    'db_writer_processes', 'db_files', 'dml_locks', 'log_buffer', 'transactions'
+  )
   and value is not null;
 
   -- parametros modificados en el spfile
@@ -72,7 +77,7 @@ create table emanuel0204.t05_update_param_spfile as
   select name,value
   from v$spparameter
   where name in (
-    'optimizer_mode','hash_area_size', 'db_writter_processes', 
+    'optimizer_mode','hash_area_size', 'db_writer_processes', 
     'db_files', 'dml_locks', 'log_buffer', 'transactions'
   )
   and value is not null;

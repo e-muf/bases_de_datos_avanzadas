@@ -6,7 +6,7 @@
 mkdir -p /unam-bda/ejercicios-practicos/t0204
 
 # Cambiando grupo asociado a los directorios
-chown -R emanuel:oinstall /unam-bda/ejercicios-practicos/
+chown emanuel:oinstall -R /unam-bda/ejercicios-practicos/
 
 # Cambiando permisos a las carpetas
 chmod -R 774 /unam-bda/ejercicios-practicos/

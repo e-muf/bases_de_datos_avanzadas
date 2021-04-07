@@ -1,0 +1,83 @@
+idle> start s-05-validador-main-cambios.sql
+=========================================================
+Iniciando validador - Ejercicio práctico 02 - 04
+Presionar Enter si los valores configurados son correctos.
+De lo contario editar el script s-05-oracle-validador-main.sql
+O en su defecto proporcionar nuevos valores
+=========================================================
+Prefijo empleado para crear usuarios (nombre del alumno) [jorge]: emanuel
+Proporcionar el password de sys [Configurado en script]: 
+Creando procedimientos para validar.
+Connected.
+
+                                                                                
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+No errors.
+===============================================                                                                                                                                                         
+Iniciando proceso de validación de respuestas                                                                                                                                                           
+Incluir en el reporte a partir de este punto                                                                                                                                                            
+===============================================                                                                                                                                                         
+SESSION_TIME:	07/04/2021 03:08:18
+USR_COD HOST:	758999
+OS_USER:	emanuel
+BD_USER:	SYS
+CON_NAME:	efmbda2                                                                                                  
+
+Haciendo reset de tablas
+eliminando T03_UPDATE_PARAM_SESSION                                                                                                                                                                     
+eliminando T04_UPDATE_PARAM_INSTANCE                                                                                                                                                                    
+eliminando T05_UPDATE_PARAM_SPFILE                                                                                                                                                                      
+Ejecutando script s-03-modifica-parametros.sql
+Connected.
+
+                                                                                                                                                                                                        
+2021-04-07 03:08:19.901-758999-PC.E001E.C001S.C001 ==> OK Tablas con datos de parámetros encontradas                                                                                                    
+2021-04-07 03:08:19.916-758999-CW.M002F.W002Y.W002 ==> OK Contenido correcto en T01_SPPARAMETERS                                                                                                        
+2021-04-07 03:08:19.922-758999-0T.A003M.T003S.T003 ==> OK Contenido correcto en T02_OTHER_PARAMETERS                                                                                                    
+2021-04-07 03:08:19.934-758999-EM.N004B.M004S.M004 ==> OK Valor correcto para nls_date_format : dd/mm/yyyy hh24:mi:ss - T03_UPDATE_PARAM_SESSION                                                        
+2021-04-07 03:08:19.942-758999-FN.U005D.N005Y.N005 ==> OK Parámetro nls_date_format no encontrado en T04_UPDATE_PARAM_INSTANCE                                                                          
+2021-04-07 03:08:19.950-758999-MS.E006A.S006S.S006 ==> OK Parámetro nls_date_format no encontrado en T05_UPDATE_PARAM_SPFILE                                                                            
+2021-04-07 03:08:19.951-758999-0F.L0072.F007S.F007 ==> OK Valor correcto para db_writer_processes : 1 - T03_UPDATE_PARAM_SESSION                                                                        
+2021-04-07 03:08:19.956-758999-FY.E008E.Y008Y.Y008 ==> OK Valor correcto para db_writer_processes : 1 - T04_UPDATE_PARAM_INSTANCE                                                                       
+2021-04-07 03:08:19.959-758999-IT.M009F.T009S.T009 ==> OK Valor correcto para db_writer_processes : 2 - T05_UPDATE_PARAM_SPFILE                                                                         
+2021-04-07 03:08:20.037-758999-0B.A010M.B010S.B010 ==> OK Valor correcto para log_buffer : 7528448 - T03_UPDATE_PARAM_SESSION                                                                           
+2021-04-07 03:08:20.039-758999-UW.N011B.W011Y.W011 ==> OK Valor correcto para log_buffer : 7528448 - T04_UPDATE_PARAM_INSTANCE                                                                          
+2021-04-07 03:08:20.040-758999-NL.U012D.L012S.L012 ==> OK Valor correcto para log_buffer : 10485760 - T05_UPDATE_PARAM_SPFILE                                                                           
+2021-04-07 03:08:20.044-758999-AE.E013A.E013S.E013 ==> OK Valor correcto para db_files : 200 - T03_UPDATE_PARAM_SESSION                                                                                 
+2021-04-07 03:08:20.045-758999-MJ.L0142.J014Y.J014 ==> OK Valor correcto para db_files : 200 - T04_UPDATE_PARAM_INSTANCE                                                                                
+2021-04-07 03:08:20.046-758999-PL.E015E.L015S.L015 ==> OK Valor correcto para db_files : 250 - T05_UPDATE_PARAM_SPFILE                                                                                  
+2021-04-07 03:08:20.051-758999-CT.M016F.T016S.T016 ==> OK Valor correcto para dml_locks : 1424 - T03_UPDATE_PARAM_SESSION                                                                               
+2021-04-07 03:08:20.052-758999-0Y.A017M.Y017Y.Y017 ==> OK Valor correcto para dml_locks : 1424 - T04_UPDATE_PARAM_INSTANCE                                                                              
+2021-04-07 03:08:20.054-758999-ET.N018B.T018S.T018 ==> OK Valor correcto para dml_locks : 2500 - T05_UPDATE_PARAM_SPFILE                                                                                
+2021-04-07 03:08:20.058-758999-FA.U019D.A019S.A019 ==> OK Valor correcto para transactions : 356 - T03_UPDATE_PARAM_SESSION                                                                             
+2021-04-07 03:08:20.059-758999-MQ.E020A.Q020Y.Q020 ==> OK Valor correcto para transactions : 356 - T04_UPDATE_PARAM_INSTANCE                                                                            
+2021-04-07 03:08:20.061-758999-0K.L0212.K021S.K021 ==> OK Valor correcto para transactions : 600 - T05_UPDATE_PARAM_SPFILE                                                                              
+2021-04-07 03:08:20.066-758999-FK.E022E.K022S.K022 ==> OK Valor correcto para hash_area_size : 2097152 - T03_UPDATE_PARAM_SESSION                                                                       
+2021-04-07 03:08:20.067-758999-IP.M023F.P023Y.P023 ==> OK Valor correcto para hash_area_size : 131072 - T04_UPDATE_PARAM_INSTANCE                                                                       
+2021-04-07 03:08:20.069-758999-0P.A024M.P024S.P024 ==> OK Valor correcto para hash_area_size : 2097152 - T05_UPDATE_PARAM_SPFILE                                                                        
+2021-04-07 03:08:20.073-758999-UW.N025B.W025S.W025 ==> OK Valor correcto para sort_area_size : 65536 - T04_UPDATE_PARAM_INSTANCE                                                                        
+2021-04-07 03:08:20.074-758999-NK.U026D.K026Y.K026 ==> OK Valor correcto para sort_area_size : 1048576 - T03_UPDATE_PARAM_SESSION                                                                       
+2021-04-07 03:08:20.076-758999-AV.E027A.V027S.V027 ==> OK Parámetro sort_area_size no encontrado en T05_UPDATE_PARAM_SPFILE                                                                             
+2021-04-07 03:08:20.077-758999-MU.L0282.U028S.U028 ==> OK Valor correcto para sql_trace : TRUE - T04_UPDATE_PARAM_INSTANCE                                                                              
+2021-04-07 03:08:20.078-758999-PQ.E029E.Q029Y.Q029 ==> OK Valor correcto para sql_trace : TRUE - T03_UPDATE_PARAM_SESSION                                                                               
+2021-04-07 03:08:20.079-758999-CX.M030F.X030S.X030 ==> OK Parámetro sql_trace no encontrado en T05_UPDATE_PARAM_SPFILE                                                                                  
+2021-04-07 03:08:20.081-758999-0B.A031M.B031S.B031 ==> OK Valor correcto para optimizer_mode : FIRST_ROWS_100 - T03_UPDATE_PARAM_SESSION                                                                
+2021-04-07 03:08:20.082-758999-EF.N032B.F032Y.F032 ==> OK Valor correcto para optimizer_mode : FIRST_ROWS_100 - T04_UPDATE_PARAM_INSTANCE                                                               
+2021-04-07 03:08:20.083-758999-FX.U033D.X033S.X033 ==> OK Valor correcto para optimizer_mode : FIRST_ROWS_100 - T05_UPDATE_PARAM_SPFILE                                                                 
+2021-04-07 03:08:20.084-758999-MV.E034A.V034S.V034 ==> OK Valor correcto para cursor_invalidation : DEFERRED - T03_UPDATE_PARAM_SESSION                                                                 
+2021-04-07 03:08:20.086-758999-0D.L0352.D035Y.D035 ==> OK Valor correcto para cursor_invalidation : IMMEDIATE - T04_UPDATE_PARAM_INSTANCE                                                               
+2021-04-07 03:08:20.087-758999-FI.E036E.I036S.I036 ==> OK Parámetro cursor_invalidation no encontrado en T05_UPDATE_PARAM_SPFILE                                                                        
+2021-04-07 03:08:20.128-758999-II.M037F.I037S.I037 ==> OK Archivo e-01-spparameter-pfile.txt encontrado                                                                                                 
+2021-04-07 03:08:20.130-758999-0X.A038M.X038Y.X038 ==> OK Archivo e-02-spparameter-alert-log.txt encontrado                                                                                             
+2021-04-07 03:08:20.131-758999-UW.N039B.W039S.W039 ==> OK Archivo e-03-spparameter-pfile.txt encontrado                                                                                                 
+2021-04-07 03:08:20.136-758999-NB.U040D.B040S.B040 ==> OK Validación concluida                                                                                                                          
