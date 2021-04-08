@@ -45,7 +45,7 @@ Respuesta:
 
 Los paramétros que inician con * son los que nosotros configuramos en el pfile
 antes de la creación de la base de datos, mientras que los que inician con
-<oracle_sid>.__ son los parametrós que se tenían configurados anteriormente.
+<oracle_sid>.__ son los parametrós que se tenían configurados por defecto.
 
 ===============================================================================
 
@@ -58,6 +58,6 @@ Respuesta:
 
 Los valores tanto en los archivos como en la tabla son exactamente los mismos,
 la única diferencia es que en los archivos se muestra el parámetro 
-memory_target en megabytes mientras que en la tabla se muestra en kilobytes.
+memory_target en megabytes mientras que en la tabla se muestra en bytes.
 
 */
