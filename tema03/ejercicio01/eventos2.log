@@ -1,0 +1,24 @@
+emanuel0301@efmbda2> insert into test2 values (2);
+
+1 row created.
+
+emanuel0301@efmbda2> insert into test2 values (3);
+
+1 row created.
+
+emanuel0301@efmbda2> connect emanuel0301/emanuel
+ERROR:
+ORA-03113: end-of-file on communication channel
+Process ID: 0
+Session ID: 95 Serial number: 49970 
+
+
+Connected.
+
+                                                                                
+
+emanuel0301@efmbda2> select * from test2;
+
+no rows selected
+
+emanuel0301@efmbda2> spool off
